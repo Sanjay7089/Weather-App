@@ -1,7 +1,22 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-  return <>weather app</>;
-}
+//pages
+import Error from "./Pages/Error";
+import Main from "./Pages/Main";
+// Library
+// import { ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
+import "./App.css";
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
