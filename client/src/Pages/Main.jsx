@@ -1,11 +1,18 @@
 // components
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "../Components/SearchBar";
 import WeatherCard from "../Components/WeatherCard";
 import WeatherService from "../services/WeatherService";
+
 const Main = () => {
-  const [city, setCity] = useState();
-  const [data, fetchData] = WeatherService();
+  const [city, setCity] = useState("");
+  const { data, fetchData } = WeatherService();
+
+  // useEffect(() => {
+  //   // This will run whenever the `data` state changes
+  //   console.log(data);
+  // }, [city]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     fetchData(city);
@@ -24,7 +31,7 @@ const Main = () => {
         main_handleSubmit={handleSubmit}
         main_handleSearch={handleSearch}
       />
-      <WeatherCard />
+      <WeatherCard weatherData={data} />
     </div>
   );
 };

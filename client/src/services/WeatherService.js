@@ -1,12 +1,11 @@
-import axios from "axios";
 import { useState } from "react";
-
+import axios from "axios";
 const WeatherService = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 
-  const fetchData = async (city) => {
+  async function fetchData(city) {
     try {
       const response = await axios.get(`http://localhost:8000/${city}`);
       setData(response.data);
@@ -17,12 +16,9 @@ const WeatherService = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }
 
-  if (isLoading) return "Loading...";
-  if (error) return error;
-
-  return [data, fetchData];
+  return { data, fetchData };
 };
 
 export default WeatherService;
