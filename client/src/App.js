@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //pages
-import Error from "./Pages/Error";
+// import Error from "./Pages/Error";
 import Main from "./Pages/Main";
 // Library
 // import { ToastContainer } from "react-toastify";
@@ -9,14 +9,7 @@ import Main from "./Pages/Main";
 
 import "./App.css";
 const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </Router>
-  );
+  return <Main />;
 };
 
 export default App;
