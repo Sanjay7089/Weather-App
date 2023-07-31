@@ -1,53 +1,51 @@
-# Byte-compiled / optimized / DLL files
+*.pyc
+/backend/db.sqlite3
+.DS_Store
+.env
+**/settings/local.py
+/staticfiles/*
+/mediafiles/*
 __pycache__/
-*.py[cod]
+/.vscode/
 
-# C extensions
-*.so
+# coverage result
+.coverage
+/coverage/
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-.eggs/
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Pycharm project files
+# pycharm
 .idea/
 
-# PyTest cache
-.pytest_cache/
+# data
+*.dump
 
-# Coverage
-.coverage
-coverage.xml
+# npm
+node_modules/
+npm-debug.log
 
-# Tox
-.tox/
-.cache/
-.python-version
+# Webpack
+/frontend/bundles/*
+/frontend/webpack_bundles/*
+/webpack-stats.json
 
-# VirtualEnv
-.venv/
+# Sass
+.sass-cache
+*.map
 
-# Developers
-*.sw*
-manage.py
-.DS_Store
+# General
+/{{project_name}}-venv/
+/venv/
+/env/
+/output/
+/cache/
+boilerplate.zip
 
-# example database
-drf_example
+# Spritesmith
+spritesmith-generated/
+spritesmith.scss
+
+# templated email
+tmp_email/
+
+.direnv
+.envrc
+.tool-versions
