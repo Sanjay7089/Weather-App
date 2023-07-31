@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 const SearchBar = ({ valueCity, main_handleSubmit, main_handleSearch }) => {
   return (
     <div className="weather-search">
-      <div classNames="weather-input">
+      <div className="weather-input">
         <form>
           <input
             placeholder="Type City..."
