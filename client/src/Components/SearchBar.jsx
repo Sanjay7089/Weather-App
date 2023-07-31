@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 
-const SearchBar = () => {
-  const [city, setCity] = useState("Indore");
-  const handleSubmit = (e) => {
-    setCity(e.target.value);
-  };
+const SearchBar = ({ valueCity, main_handleSubmit, main_handleSearch }) => {
   return (
     <div className="weather-search">
       <form>
         <input
           placeholder="Type City..."
-          value={city}
-          onChange={handleSubmit}
+          value={valueCity}
+          onChange={main_handleSearch}
           classNames="weather-input"
         />
-        <button type="Submit" >search</button>
+        <button type="Submit" onClick={main_handleSubmit}>
+          search
+        </button>
       </form>
     </div>
   );
