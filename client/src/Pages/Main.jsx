@@ -31,7 +31,7 @@ const Main = () => {
         main_handleSubmit={handleSubmit}
         main_handleSearch={handleSearch}
       />
-      <WeatherCard weatherData={data} />
+      {data & <WeatherCard weatherData={data} />}
     </div>
   );
 };
