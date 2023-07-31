@@ -37,7 +37,7 @@ The dependencies for each are listed below:
 #### 1. Clone the git repository
 
 ```bash
-git clone https://github.com/saurzv/weather-app.git
+
 ```
 
 #### 2. Install required packages for backend and frontend and run servers
