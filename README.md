@@ -1,4 +1,7 @@
 # Full Stack(React js + Django) Weather App
+![image](https://github.com/Sanjay7089/Weather-App/assets/77526471/2ecb4e32-d8f0-49ba-bdef-3d51110ecf53)
+### backend-api config 
+![image](https://github.com/Sanjay7089/Weather-App/assets/77526471/3caeda2b-380c-4c71-a584-441be943ba2a)
 
 ## How to use
 
