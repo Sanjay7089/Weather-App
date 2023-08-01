@@ -1,5 +1,12 @@
-# Byte-compiled / optimized / DLL files
+*.pyc
+/backend/db.sqlite3
+.DS_Store
+.env
+**/settings/local.py
+/staticfiles/*
+/mediafiles/*
 __pycache__/
+
 *.py[cod]
 
 # C extensions
@@ -27,27 +34,40 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Pycharm project files
+
 .idea/
 
-# PyTest cache
-.pytest_cache/
+# data
+*.dump
 
-# Coverage
-.coverage
-coverage.xml
+# npm
+node_modules/
+npm-debug.log
 
-# Tox
-.tox/
-.cache/
-.python-version
+# Webpack
+/frontend/bundles/*
+/frontend/webpack_bundles/*
+/webpack-stats.json
 
-# VirtualEnv
-.venv/
+# Sass
+.sass-cache
+*.map
 
-# Developers
-*.sw*
-manage.py
-.DS_Store
+# General
+/{{project_name}}-venv/
+/venv/
+/env/
+/output/
+/cache/
+boilerplate.zip
+
+# Spritesmith
+spritesmith-generated/
+spritesmith.scss
+
+# templated email
+tmp_email/
+
 
 # example database
 drf_example
@@ -89,3 +109,4 @@ packages/react-devtools-extensions/.tempUserDataDir
 packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
+
