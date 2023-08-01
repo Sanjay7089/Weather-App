@@ -10,8 +10,12 @@ const SearchBar = ({ valueCity, main_handleSubmit, main_handleSearch }) => {
             value={valueCity}
             onChange={main_handleSearch}
           />
-          <button type="Submit" onClick={main_handleSubmit}>
-            search
+          <button
+            disabled={!valueCity}
+            type="Submit"
+            onClick={main_handleSubmit}
+          >
+            Find
           </button>
         </form>
       </div>

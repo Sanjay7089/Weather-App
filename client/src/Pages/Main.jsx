@@ -6,18 +6,15 @@ import WeatherService from "../services/WeatherService";
 
 const Main = () => {
   const [city, setCity] = useState("");
-  const { data, fetchData } = WeatherService();
-
-  // useEffect(() => {
-  //   // This will run whenever the `data` state changes
-  //   console.log(data);
-  // }, [city]);
+  const [url, setUrl] = useState(`http://localhost:8000/${city}`);
+  const { data } = WeatherService(url);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetchData(city);
-    console.log(data);
+    setUrl(`http://localhost:8000/${city}`);
+    setCity("");
   };
+
   const handleSearch = (e) => {
     setCity(e.target.value);
   };
@@ -31,7 +28,12 @@ const Main = () => {
         main_handleSubmit={handleSubmit}
         main_handleSearch={handleSearch}
       />
-      {data & <WeatherCard weatherData={data} />}
+
+      {data != null ? (
+        <WeatherCard weatherData={data} />
+      ) : (
+        <h1>Search weather by city !</h1>
+      )}
     </div>
   );
 };
