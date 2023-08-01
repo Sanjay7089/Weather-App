@@ -21,7 +21,7 @@ def getWeather(request, **kwargs):
 
     if rsp.status_code == 200 :
         data = rsp.json()
-
+        
         lat = data[0]['lat']
         lon = data[0]['lon']
 
@@ -32,7 +32,7 @@ def getWeather(request, **kwargs):
         if rsp.status_code == 200 :
 
             data = rsp.json()
-            print(data)
+            # print(data)
             return JsonResponse(data, status=200)
         else :
             return JsonResponse({'error' : 'Some error occured'}, status=400)
